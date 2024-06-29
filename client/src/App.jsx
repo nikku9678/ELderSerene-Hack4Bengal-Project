@@ -6,20 +6,18 @@ import Home from './pages/home/Home';
 import About from './components/about/About';
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
-import Auth from './pages/auth/Auth';
 import Appointment from './pages/appointment/Appointment';
 import { Toaster } from 'react-hot-toast';
 import Employee from './pages/employee/Employee';
 import AllServices from './pages/all-services/AllServices';
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
 const App = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleChatbot = () => {
-    setIsOpen(!isOpen);
-  };
   const handleScroll = () => {
-    if (window.pageYOffset > 300) {
+    if (window.pageYOffset > 300) {0
       setShowScrollTop(true);
     } else {
       setShowScrollTop(false);
@@ -45,7 +43,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/auth" element={<Auth />} />
+          {/* <Route path="/auth" element={<Auth />} /> */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/appoinment" element={<Appointment />} />
           <Route path="/employee" element={<Employee />} />
           <Route path="/services" element={<AllServices />} />
