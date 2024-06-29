@@ -1,28 +1,36 @@
-import React from 'react';
-import './WhyChooseUs.css';
+import React from "react";
+import "./WhyChooseUs.css";
 
 const WhyChooseUs = () => {
   return (
     <div className="choose-us">
-      <div className='top'>
+      <div className="top">
         <h1>Why Choose Us</h1>
-        <p>At ElderSerene, we are dedicated to revolutionizing elder care with a holistic and innovative approach. Our comprehensive services and personalized care plans ensure that every elder receives the support and attention they deserve, allowing them to live with dignity, happiness, and well-being.</p>
+        <p>
+          At ElderSerene, we are dedicated to providing comprehensive and
+          compassionate care solutions tailored to the unique needs of seniors.
+          Our wide range of services, from healthcare to personal care, ensures
+          that every aspect of elder care is covered. We believe in making
+          quality elder care accessible and affordable, enhancing the lives of
+          our elders and providing peace of mind to their families.
+        </p>
       </div>
       <div className="content">
         <div className="choose-left">
-          <h2>Our Key Features</h2>
-          <p>Discover the unique aspects that set ElderSerene apart and why we are the preferred choice for elder care.</p>
+          <h2>Our Unique Features</h2>
 
           <div className="description">
-            <p>Our platform addresses the critical needs of the aging population through:</p>
             <ul>
-              <li>Personal Care and Nursing</li>
-              <li>Doctor Consultation and Home Visits</li>
-              <li>Emergency Medical Services</li>
-              <li>Socializing Events and Activities</li>
-              <li>Home Services</li>
-              <li>24/7 Care and Health Monitoring</li>
-              <li>Grocery and Pharmacy Services</li>
+              <li>Comprehensive Care Services</li>
+              <li>Tailored Care Plans</li>
+              <li>Cost-Effective Solutions</li>
+             
+              <li>Health Monitoring</li>
+              <li>Community Engagement</li>
+              <li>Safety and Peace of Mind</li>
+              
+              <li>Panic Button Feature</li>
+              
               <li>Scheduled Appointments and Reminders</li>
             </ul>
             <button>Read More</button>
@@ -34,7 +42,7 @@ const WhyChooseUs = () => {
               <iframe
                 width="100%"
                 height="315"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                src="https://www.youtube.com/embed/wS0SS2eeYP8"
                 title="YouTube video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import './Appointment.css';
-import axios from 'axios';
-import { Base_url } from '../../config';
-import toast from 'react-hot-toast';
+import React, { useState } from "react";
+import "./Appointment.css";
+import axios from "axios";
+import { Base_url } from "../../config";
+import toast from "react-hot-toast";
 
 const Appointment = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-    city: '',
-    service_type: '',
-    state: '',
-    address: '',
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    city: "",
+    service_type: "",
+    state: "",
+    address: "",
   });
 
   const [loading, setLoading] = useState(false);
-  const [successMessage, setSuccessMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,29 +36,29 @@ const Appointment = () => {
         formData,
         {
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           withCredentials: true,
         }
       );
       console.log(data);
       if (data.success) {
-        toast.success('Message sent successfully');
+        toast.success("Message sent successfully");
         setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          message: '',
-          city: '',
-          service_type: '',
-          state: '',
-          address: '',
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+          city: "",
+          service_type: "",
+          state: "",
+          address: "",
         });
-        setSuccessMessage('Message sent successfully');
+        setSuccessMessage("Message sent successfully");
       }
     } catch (error) {
       console.log(error);
-      setSuccessMessage('Failed to send message. Please try again.');
+      setSuccessMessage("Failed to send message. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -67,11 +67,12 @@ const Appointment = () => {
   return (
     <div className="appointment">
       <div className="left-section">
-        <img src="https://via.placeholder.com/600" alt="Appointment" />
+        <img src={"images/service.jpeg"} alt="Appointment" />
+        <img src={"images/bookService.jpg"} alt="Appointment" />
       </div>
       <div className="right-section">
         <form onSubmit={handleSubmit} className="appointment-form">
-          <h2>Get an Appointment</h2>
+          <h2>Book a Service</h2>
           <label>
             Name:
             <input
@@ -136,12 +137,20 @@ const Appointment = () => {
               disabled={loading}
             >
               <option value="">Select Service Type</option>
-              <option value="Daily Living Assistance">Daily Living Assistance</option>
+              <option value="Daily Living Assistance">
+                Daily Living Assistance
+              </option>
               <option value="Healthcare Services">Healthcare Services</option>
-              <option value="Health Monitoring and Checkups">Health Monitoring and Checkups</option>
-              <option value="Social Engagement and Mental Well-Being">Social Engagement and Mental Well-Being</option>
+              <option value="Health Monitoring and Checkups">
+                Health Monitoring and Checkups
+              </option>
+              <option value="Social Engagement and Mental Well-Being">
+                Social Engagement and Mental Well-Being
+              </option>
               <option value="Convenience Services">Convenience Services</option>
-              <option value="Safety and Emergency Response">Safety and Emergency Response</option>
+              <option value="Safety and Emergency Response">
+                Safety and Emergency Response
+              </option>
             </select>
           </label>
           <label>
@@ -166,9 +175,11 @@ const Appointment = () => {
             />
           </label>
           <button type="submit" disabled={loading}>
-            {loading ? 'Submitting...' : 'Get Appointment'}
+            {loading ? "Submitting..." : "Get Appointment"}
           </button>
-          {successMessage && <p className="success-message">{successMessage}</p>}
+          {successMessage && (
+            <p className="success-message">{successMessage}</p>
+          )}
         </form>
       </div>
     </div>

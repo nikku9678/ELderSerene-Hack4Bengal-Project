@@ -22,7 +22,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav">
         <div className="logo">
-          <Logo />
+        <img src={"images/logo.PNG"} alt="" />
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           <Hamburger />

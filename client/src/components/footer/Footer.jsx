@@ -1,44 +1,54 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      
       <div className="footer-section">
-      <img src="https://via.placeholder.com/60" alt="Placeholder" />
- 
+        <img src={"images/logo.PNG"} alt="Placeholder" />
+
         <p>
-          We are a leading company in providing the best services to our customers.
-          Our goal is to exceed your expectations with our quality and commitment.
+          ElderSerene offers tailored and compassionate solutions for seniors'
+          unique needs. From healthcare to companionship and community
+          engagement, we redefine elder care with affordability, accessibility,
+          and empathy across India.
         </p>
       </div>
       <div className="footer-section">
         <h3>Services</h3>
         <ul>
-          <li>Web Development</li>
-          <li>App Development</li>
-          <li>SEO</li>
-          <li>Marketing</li>
+          <li>Virtual Consultations with Doctors</li>
+          <li>Nursing Services</li>
+          <li>Physiotherapy</li>
+          <li>Personal Care</li>
+          <li>Emergency Medical Services</li>
         </ul>
       </div>
       <div className="footer-section">
         <h3>Contact</h3>
         <ul>
-          <li>Email: info@company.com</li>
-          <li>Phone: +123 456 7890</li>
-          <li>Address: 123 Street, City, Country</li>
+          <li>Email: ESerene@gmail.com</li>
+          <li>Phone: +91 6200293018</li>
+          <li>Address: Kolkata ,India</li>
         </ul>
       </div>
       <div className="footer-section">
         <h3>Follow Us</h3>
         <ul>
-          <li><a href="https://facebook.com">Facebook</a></li>
-          <li><a href="https://twitter.com">Twitter</a></li>
-          <li><a href="https://linkedin.com">LinkedIn</a></li>
-          <li><a href="https://instagram.com">Instagram</a></li>
+          <li>
+            <a href="https://facebook.com">Facebook</a>
+          </li>
+          <li>
+            <a href="https://twitter.com">Twitter</a>
+          </li>
+          <li>
+            <a href="https://linkedin.com">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://instagram.com">Instagram</a>
+          </li>
         </ul>
-      </div>  
+      </div>
     </footer>
   );
 };

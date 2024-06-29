@@ -42,7 +42,7 @@ const Admin = () => {
         <div className="menu-icon" onClick={() => window.openSidebar()}>
           <span className="material-icons-outlined"><i className="fa-solid fa-bars"></i></span>
         </div>
-        <div className='site-logo'><h1>Nikku</h1></div>
+        <div className='site-logo'><h1></h1></div>
         <div className="header-left">
           <input type="text" placeholder='Search' />
         </div>
@@ -58,7 +58,7 @@ const Admin = () => {
       <aside id="sidebar">
         <div className="sidebar-title">
           <div className="sidebar-brand">
-            Nikku
+            
           </div>
           <span className="material-icons-outlined" onClick={() => window.closeSidebar()}><i className="fa-solid fa-xmark"></i></span>
         </div>
