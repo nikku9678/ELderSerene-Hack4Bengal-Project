@@ -68,9 +68,14 @@
 #get-appointment{
   /* border: 2px solid green; */
   border-radius: 10px;
-  background-color: slateblue;
-  padding: 10px 20px;
+  
+  padding: 5px 10px;
+  
+}
+#get-appointment:hover{
+  background-color: teal;
   color: white;
+  text-decoration: none;
 }
 .logged-user{
     width: 150px;

@@ -175,7 +175,7 @@ const Appointment = () => {
             />
           </label>
           <button type="submit" disabled={loading}>
-            {loading ? "Submitting..." : "Get Appointment"}
+            {loading ? "Submitting..." : "Get Service"}
           </button>
           {successMessage && (
             <p className="success-message">{successMessage}</p>

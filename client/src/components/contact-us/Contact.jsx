@@ -8,7 +8,7 @@ const Contact = () => {
     <div class="section-header">
       <div class="container">
         <h2>Contact Us</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <h3>Get in touch with us today. We look forward to serving you and your family..</h3>
       </div>
     </div>
     
