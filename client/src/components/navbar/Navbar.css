@@ -9,6 +9,7 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  z-index: 100000;
 }
 .user img{
   width: 30px;
@@ -120,6 +121,7 @@
     height: calc(100vh - 60px);
     transition: all 0.3s ease-in;
     overflow: hidden;
+    
   }
 
   .nav-elements.active {

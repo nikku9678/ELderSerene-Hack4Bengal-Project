@@ -35,8 +35,25 @@ const Login = () => {
         toast.success("User login Successfully");
         navigate("/");
       }
+<<<<<<< Updated upstream
     } catch (error) {
       console.log(error);
+=======
+    );
+    console.log(data);
+    if (data.success) {
+      localStorage.setItem("userId", data?.user._id);
+      dispatch(authActions.login());
+      toast.success("User login Successfully");
+      if(data.user.isAdmin==true){
+        navigate('/admin')
+      }else{
+          navigate("/");
+
+      }
+      
+
+>>>>>>> Stashed changes
     }
   };
 

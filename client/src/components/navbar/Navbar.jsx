@@ -47,7 +47,7 @@ const Navbar = () => {
       .catch((error) => {
         console.log(error);
       });
-},[])
+},[isAdmin])
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
@@ -95,9 +95,9 @@ const Navbar = () => {
 
          {menu && <div className="logged-user" onClick={()=>setMenu(!menu)}>
             {
-              !isAdmin && <li><NavLink to="/profile">My Profile</NavLink></li>
+              <li><NavLink to="/profile">My Profile</NavLink></li>
             }
-            {isAdmin && <li><NavLink to="/admin">Admin Dashboard</NavLink></li>}
+            {isLogin && isAdmin==true && <li><NavLink to="/admin">Admin Dashboard</NavLink></li>}
             <li onClick={handleLogout} style={{cursor:'pointer'}} >Logout</li>
             
           </div>}

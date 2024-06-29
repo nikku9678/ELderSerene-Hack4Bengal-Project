@@ -14,6 +14,7 @@ import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import Contact from './components/contact-us/Contact';
 import Blogs from './components/blogs/Blogs';
+import Bot from './pages/chatbot/Bot';
 const App = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +53,7 @@ const App = () => {
           <Route path="/employee" element={<Employee />} />
           <Route path="/services" element={<AllServices />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/bot" element={<Bot />} />
           <Route path="/blogs" element={<Blogs />} />
           
       </Routes>
@@ -93,7 +95,7 @@ const App = () => {
           <i className="fa fa-arrow-up"></i>
         </button>
       )}
-      
+      <Bot/>
     </BrowserRouter>
   )
 }

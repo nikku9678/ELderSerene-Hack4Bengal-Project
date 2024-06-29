@@ -10,7 +10,7 @@ const plans = [
       "Emergency Medical Services"
     ],
     duration: "1 Month",
-    price: "5,000",
+    price: "10,000",
     features: [
       "Basic Care Support",
       "Health Monitoring",
@@ -26,7 +26,7 @@ const plans = [
       "Regular Socializing Events"
     ],
     duration: "3 Months",
-    price: "12,000",
+    price: "25,000",
     features: [
       "Comprehensive Care",
       "Social Engagement",
@@ -42,7 +42,7 @@ const plans = [
       "Live-In Caretaker (Part-Time)"
     ],
     duration: "6 Months",
-    price: "30,000",
+    price: "45,000",
     features: [
       "Advanced Health Support",
       "Personal Caretaker",
@@ -59,7 +59,7 @@ const plans = [
       "Panic Button"
     ],
     duration: "12 Months",
-    price: "60,000",
+    price: "80,000",
     features: [
       "Premium Health & Personal Care",
       "24/7 Caretaker Support",
