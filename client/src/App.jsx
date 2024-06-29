@@ -10,8 +10,6 @@ import Auth from './pages/auth/Auth';
 import Appointment from './pages/appointment/Appointment';
 import { Toaster } from 'react-hot-toast';
 import Employee from './pages/employee/Employee';
-import Chatbot from './pages/chatbot/Chatbot';
-import ChatbotIcon from 'styled-components'
 import AllServices from './pages/all-services/AllServices';
 const App = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -50,7 +48,6 @@ const App = () => {
           <Route path="/auth" element={<Auth />} />
           <Route path="/appoinment" element={<Appointment />} />
           <Route path="/employee" element={<Employee />} />
-          <Route path="/bot" element={<Chatbot />} />
           <Route path="/services" element={<AllServices />} />
           
       </Routes>
@@ -92,8 +89,7 @@ const App = () => {
           <i className="fa fa-arrow-up"></i>
         </button>
       )}
-      {isOpen && <Chatbot />}
-      <ChatbotIcon onClick={toggleChatbot} />
+      
     </BrowserRouter>
   )
 }
