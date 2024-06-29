@@ -1,12 +1,53 @@
-import { NavLink } from "react-router-dom";
-import React,{useState} from "react";
+import { NavLink ,useNavigate} from "react-router-dom";
+import React,{useEffect, useState} from "react";
+import { useSelector, useDispatch} from "react-redux";
+import { authActions } from "../../redux/store.js";
+import axios from 'axios'
 import './Navbar.css'
+import { Base_url } from "../../config";
+import toast from "react-hot-toast";
 const Navbar = () => {
+  const [isAdmin,setisAdmin] =useState(false)
   const [showNavbar, setShowNavbar] = React.useState(false);
   const [showNav, setShownav] = React.useState(false);
-  const [isLogin,setLogin] =useState(false)
+  // const [isLogin,setLogin] =useState(false)
   const [menu,setMenu] =useState(false)
 
+
+  let isLogin = useSelector((state) => state.isLogin);
+  isLogin = isLogin || localStorage.getItem("userId");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+      await axios.get(`${Base_url}/user/logout`, {
+        withCredentials: true,
+      });
+
+      toast.success("Logged Out Successfully");
+      dispatch(authActions.logout());
+      navigate("/");
+      localStorage.clear();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(()=>{
+
+    axios
+      .get(`${Base_url}/user/my-profile`, {
+        withCredentials: true,
+      })
+      .then((res) => {
+       console.log(res.data.user.isAdmin)
+       setisAdmin(res.data.user.isAdmin)
+       
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+},[])
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
@@ -33,7 +74,7 @@ const Navbar = () => {
               <NavLink to="/">Home</NavLink>
             </li >
             <li onClick={handleNavMenu}>
-              <NavLink to="/about">About us</NavLink>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li onClick={handleNavMenu}>
               <NavLink to="/services">Services</NavLink>
@@ -45,18 +86,23 @@ const Navbar = () => {
               <NavLink to="/contact">Contact</NavLink>
             </li>
             {isLogin ? <li  onClick={handleShowMenu} className='user' >
-             N
+             <img src="images/user-logo.png" alt="" />
             </li>:<li onClick={handleNavMenu}>
-              <NavLink to="/" id="get-appointment">Get Appointment</NavLink>
+              <NavLink to="/login" id="get-appointment">Login</NavLink>
             </li>}
             
           </ul>
 
-         {menu &&  <div className="logged-user">
-            <li><NavLink to="/profile">My Profile</NavLink></li>
-            <li><NavLink to="/logout">Logout</NavLink></li>
+         {menu && <div className="logged-user" onClick={()=>setMenu(!menu)}>
+            {
+              !isAdmin && <li><NavLink to="/profile">My Profile</NavLink></li>
+            }
+            {isAdmin && <li><NavLink to="/admin">Admin Dashboard</NavLink></li>}
+            <li onClick={handleLogout} style={{cursor:'pointer'}} >Logout</li>
             
           </div>}
+
+          
         </div>
       </div>
     </nav>

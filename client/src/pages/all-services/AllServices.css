@@ -17,8 +17,8 @@
     padding: 20px;
   }
   .all-services-card {
-    background-color: #ffffff;
-    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+    background-color: rgb(247, 230, 135);
+    /* background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%); */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -40,7 +40,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border: 2px solid green;
+    /* border: 2px solid green; */
   }
   .service-plan .plan-desc{
     padding: 20px;

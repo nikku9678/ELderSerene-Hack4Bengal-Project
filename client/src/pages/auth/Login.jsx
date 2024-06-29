@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Base_url } from "../../config";
 import { useDispatch } from "react-redux";
 import { authActions } from "../../redux/store.js";
+import toast from "react-hot-toast";
 const Login = () => {
   const navigate=useNavigate();
   const dispatch =useDispatch();
@@ -31,8 +32,8 @@ const submitHandler = async (e) => {
     if (data.success) {
       localStorage.setItem("userId", data?.user._id);
       dispatch(authActions.login());
-      alert("User login Successfully");
-      navigate("/user-notes");
+      toast.success("User login Successfully");
+      navigate("/");
     }
   } catch (error) {
      

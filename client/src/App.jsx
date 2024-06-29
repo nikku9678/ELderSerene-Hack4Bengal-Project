@@ -12,6 +12,8 @@ import Employee from './pages/employee/Employee';
 import AllServices from './pages/all-services/AllServices';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
+import Contact from './components/contact-us/Contact';
+import Blogs from './components/blogs/Blogs';
 const App = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -49,6 +51,8 @@ const App = () => {
           <Route path="/appoinment" element={<Appointment />} />
           <Route path="/employee" element={<Employee />} />
           <Route path="/services" element={<AllServices />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blogs" element={<Blogs />} />
           
       </Routes>
       <Footer/>

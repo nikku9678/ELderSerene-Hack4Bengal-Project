@@ -9,7 +9,8 @@
   }
   
   .plan-card {
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-color: turquoise;
+    /* background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;

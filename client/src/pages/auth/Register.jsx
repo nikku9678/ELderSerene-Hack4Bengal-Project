@@ -3,6 +3,7 @@ import "./Auth.css";
 import { Link,useNavigate } from "react-router-dom";
 import { Base_url } from "../../config.js";
 import axios from 'axios'
+import toast from "react-hot-toast";
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -29,11 +30,11 @@ const Register = () => {
 
       if (data.success) {
        
-        alert("User Register Successfully");
+        toast.success("User Register Successfully");
         navigate("/login");
       }
     } catch (error) {
-     console.log(error);
+     toast.error(error);
     }
   };
 
