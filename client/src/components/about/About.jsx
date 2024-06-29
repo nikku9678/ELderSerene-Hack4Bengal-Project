@@ -1,74 +1,140 @@
-import React from 'react'
-import './About.css'
+import React from "react";
+import "./About.css";
 const About = () => {
   return (
-    <div className='about'>
+    <div className="about">
       <div className="about-first">
-        <h1 className="about-title">Most Trusted Elder Care Services In Kolkata</h1>
-        <p>From The Heart Of Kolkata, We Provide Home Care Services To Seniors So That They Are Never Lonely
-
-Servicure is India's leading elder care organization. We work closely with senior citizens and their families providing a complete senior citizen care services in Kolkata by combining a team of highly trained nurses, care managers and through our many partners such as hospital care facilities, medical support, social workers, personal assistance, and dedicated trained nurses and more.</p>
+        <h1 className="about-title">
+          ElderSerene: Empowering Elders, Enriching Lives
+        </h1>
+        <p>
+          Welcome to ElderSerene – your trusted partner in providing
+          comprehensive, compassionate, and personalized care solutions for
+          seniors. We understand the unique challenges that come with aging and
+          are dedicated to enhancing the quality of life for our elders by
+          offering a wide range of services designed to meet their individual
+          needs.
+        </p>
+      </div>
+      <div className="aboutMainImage">
+        <div>
+          <img src={"images/aboutmain.jpeg"} alt="" />
+        </div>
       </div>
 
       <div className="about-second">
         <div className="about-second-left">
-          <div><p>We proudly call ourselves the 'proxy' child! Our suite of services are designed to support senior citizens functionally in all ways, thereby ensuring that both the elder and their child feel amply supported. </p></div>
+          <div>
+            <p>
+              At ElderSerene, we offer comprehensive elder care services,
+              including virtual doctor consultations, nursing, physiotherapy,
+              and personal care. We support daily activities with dedicated
+              caretakers, provide emergency medical services, and ensure
+              well-being with regular health checkups and grocery supplies.
+              Through regular social events, we foster engagement and community.
+              Our commitment to affordability, safety, and personalized care
+              enhances the lives of our elders.
+            </p>
+          </div>
           <div className="about-service">
             <div>
-            <i class="fa-solid fa-phone-volume"></i>
+              <img src={"images/247Logo.jpeg"} alt="sth" />
               <h2>24x7 Support</h2>
             </div>
             <div>
-              <i class="fa-solid fa-phone-volume"></i>
+              <img src={"images/trusted.jpg"} alt="sth" />
               <h2>Trusted Care Managers</h2>
             </div>
             <div>
-              <i class="fa-solid fa-phone-volume"></i>
+              <img src={"images/personalized.jpeg"} alt="sth" />
               <h2>Personalised Service</h2>
             </div>
             <div>
-              <i class="fa-solid fa-phone-volume"></i>
+              <img src={"images/care.jpg"} alt="sth" />
               <h2>Complete Care</h2>
             </div>
-           
           </div>
         </div>
         <div className="about-second-right">
-        <iframe width="450" height="250" src="https://www.youtube.com/embed/wS0SS2eeYP8" title="Geriatric Care@home" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe
+            width="450"
+            height="250"
+            src="https://www.youtube.com/embed/wS0SS2eeYP8"
+            title="Geriatric Care@home"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
       <div className="our-mission">
         <div className="mission">
           <h2>Our Mission</h2>
           <p>
-Our Mission
-Our mission is to provide top-notch and cordial service that makes elderly people happy, content and satisfied. We want to lend our hands to those who need it most, which is why we have a team of experts available for all your eldercare needs.</p>
+            At ElderSerene, our mission is to empower seniors to age with
+            dignity, comfort, and joy. We are dedicated to providing holistic
+            care that addresses not only the medical but also the emotional and
+            social needs of our elders. We strive to create an environment where
+            seniors feel valued, respected, and connected. Through our
+            innovative and tailored care solutions, we aim to alleviate the
+            concerns of families, offering peace of mind by ensuring their loved
+            ones are in compassionate and capable hands. Our mission is to make
+            high-quality elder care accessible and affordable, improving the
+            quality of life for seniors across India.
+          </p>
         </div>
         <div className="vision">
-         
           <h2>Our Vision</h2>
-          <p>To create a world and comfortable space where elderly people can feel nurtured, loved and cared for.</p>
+          <p>
+            Our vision is to redefine elder care by setting new standards of
+            excellence, compassion, and innovation. We envision a world where
+            every senior can live a fulfilling and independent life, with access
+            to comprehensive care that supports their physical, emotional, and
+            social well-being. As a leader in elder care, we aim to continuously
+            evolve and expand our services to meet the growing and changing
+            needs of the elderly population. We are committed to fostering a
+            supportive and inclusive community for seniors, where they can
+            thrive and stay connected. Through our efforts, we seek to build a
+            society that values and uplifts its elders, ensuring they live their
+            golden years with dignity and joy.
+          </p>
         </div>
       </div>
-      <div className="about-second">
+      {/* <div className="about-second">
         <div className="about-second-left">
           <img src="https://via.placeholder.com/500" alt="" />
         </div>
         <div className="about-second-right">
           <p>Our Founder</p>
           <h1 className="about-title">About</h1>
-          
-          <ul className='we-provide'>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, asperiores.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, asperiores.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, asperiores.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, asperiores.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, asperiores.</li>
+
+          <ul className="we-provide">
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum, asperiores.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum, asperiores.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum, asperiores.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum, asperiores.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum, asperiores.
+            </li>
           </ul>
         </div>
-      </div>
+      </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
