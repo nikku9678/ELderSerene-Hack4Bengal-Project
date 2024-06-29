@@ -33,7 +33,7 @@ const Bot = () => {
 
     try {
       const response = await axios({
-        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyA8ARWmFN8aJRvQtva500xUD_OPLFZFGNY`,
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=API_KEY`,
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
