@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Admin.css';
 import AppointmentData from './AppointmentData';
 import Employee from '../employee/Employee';
+import ContactList from './ContactList';
 
 const Admin = () => {
   const [activeTab, setActiveTab] = useState('Appointment');
@@ -76,6 +77,9 @@ const Admin = () => {
           <li className={`sidebar-list-item ${activeTab === 'Employee' ? 'active' : ''}`} onClick={() => handleTabClick('Employee')}>
             Employee
           </li>
+          <li className={`sidebar-list-item ${activeTab === 'ContactInfo' ? 'active' : ''}`} onClick={() => handleTabClick('ContactInfo')}>
+          ContactInfo
+          </li>
         </ul>
       </aside>
       {/* <!-- End Sidebar --> */}
@@ -99,6 +103,15 @@ const Admin = () => {
             <div><h2>All Employee</h2></div>
            
           <Employee/>
+          
+          </div>
+        )}
+        {activeTab === 'ContactInfo' && (
+          <div className="appointment-data">
+           
+            <div><h2>All Contact Info</h2></div>
+           
+          <ContactList/>
           
           </div>
         )}

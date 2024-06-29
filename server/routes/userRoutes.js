@@ -10,7 +10,7 @@ const router = express.Router();
 router.post("/login",login);
 router.get("/logout",logout);
 router.post("/register",register);
-router.get("/my-profile",isAuthenticate,getUserProfile);
+router.get("/profile",isAuthenticate,getUserProfile);
 
 
 export default router;

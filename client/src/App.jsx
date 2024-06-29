@@ -15,6 +15,7 @@ import Register from './pages/auth/Register';
 import Contact from './components/contact-us/Contact';
 import Blogs from './components/blogs/Blogs';
 import Bot from './pages/chatbot/Bot';
+import UserProfile from './pages/user-profile/UserProfile';
 const App = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -55,6 +56,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/bot" element={<Bot />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/profile" element={<UserProfile />} />
           
       </Routes>
       <Footer/>
