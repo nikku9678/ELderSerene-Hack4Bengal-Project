@@ -1,1 +1,1 @@
-export const Base_url ="http://localhost:8080/api/v1"
+export const Base_url ="https://elderserene-hack4bengal-project.onrender.com/api/v1"
