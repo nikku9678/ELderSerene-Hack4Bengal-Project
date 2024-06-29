@@ -1,0 +1,61 @@
+
+  .plans-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .plan-card {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .plan-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .plan-card .price {
+    font-size: 1.25em;
+    margin-bottom: 15px;
+    color: #007BFF;
+  }
+  
+  .plan-card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .plan-card ul li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+  }
+  
+  .plan-card ul li:before {
+    content: '✔';
+    color: #007BFF;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  /* Responsive design */
+  @media (min-width: 768px) {
+    .plans-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .plans-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
